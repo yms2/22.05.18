@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+        var name =prompt('이름을 입력하세요')
+        var kor = Number(prompt('국어점수를 입력하세요'))
+        var mat = Number(prompt('수학점수를 입력하세요'))
+        var eng = Number(prompt('영어점수를 입력하세요'))
+        const total = kor + eng + mat
+        const avg = total /3
+        let score =''
+
+        if(avg >= 90){
+                score ='A'
+       }else if(avg >= 80){ 
+                score ='B'
+       }else if (avg >= 70){
+                score ='C'
+       }else if (avg >= 60) {
+                score ='D'
+       }else{
+                score ='F'
+       }
+
+        document.write(`<h2> ${name}님 성적표</h2>`)
+        document.write(`<p>국어점수:${kor}</p>`)
+        document.write(`<p>수학점수:${mat}</p>`)
+        document.write(`<p>영어점수:${eng}</p>`)
+        document.write(`<p>총점:${total}</p>`)
+        document.write(`<p>평균:${avg}</p>`)
+        document.write(`<p>학점:${score}</p>`)
+    </script>
+</body>
+</html>
